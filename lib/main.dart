@@ -81,23 +81,24 @@ class _LauncherHomePageState extends State<LauncherHomePage> {
   }
 
   Future<bool> _onWillPop() async {
-    bool? exitConfirmed = await showCupertinoDialog<bool>(
-      context: context,
-      builder: (BuildContext context) => CupertinoAlertDialog(
-        title: const Text('Exit Launcher'),
-        content: const Text('Are you sure you want to exit the launcher?'),
-        actions: [
-          CupertinoDialogAction(child: const Text('Cancel'), onPressed: () => Navigator.of(context).pop(false)),
-          CupertinoDialogAction(
-            isDestructiveAction: true,
-            child: const Text('Exit'),
-            onPressed: () => Navigator.of(context).pop(true),
-          ),
-        ],
-      ),
-    );
+    // bool? exitConfirmed = await showCupertinoDialog<bool>(
+    //   context: context,
+    //   builder: (BuildContext context) => CupertinoAlertDialog(
+    //     title: const Text('Exit Launcher'),
+    //     content: const Text('Are you sure you want to exit the launcher?'),
+    //     actions: [
+    //       CupertinoDialogAction(child: const Text('Cancel'), onPressed: () => Navigator.of(context).pop(false)),
+    //       CupertinoDialogAction(
+    //         isDestructiveAction: true,
+    //         child: const Text('Exit'),
+    //         onPressed: () => Navigator.of(context).pop(true),
+    //       ),
+    //     ],
+    //   ),
+    // );
 
-    return exitConfirmed ?? false;
+    // return exitConfirmed ?? false;
+    return false;
   }
 
   @override
